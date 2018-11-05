@@ -1,0 +1,11 @@
+# Copyright (C) 2011-2017 Khaled Yakdan.
+# All rights reserved.
+
+NAMED_CONSTANTS = {
+    0x4D5A: 'EXE_FILE_MZ_HEADER',
+    0x5A4D: 'EXE_FILE_MZ_HEADER',
+    0x5045: 'EXE_FILE_PE_HEADER',
+    0x4550: 'EXE_FILE_PE_HEADER',
+    0x4B50: 'ZIP_FILE_SIGNATURE',
+    0x504B: 'ZIP_FILE_SIGNATURE',
+}

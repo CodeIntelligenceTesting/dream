@@ -1,0 +1,3239 @@
+{
+	"strlen": 
+	{
+		"return": 
+		{
+			"type": "size_t",
+			"name": "len"
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "const char *",
+				"name": "str"
+			}
+		]
+	},
+
+	"wclen": 
+	{
+		"return": 
+		{
+			"type": "size_t",
+			"name": "len"
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "const wchar_t *",
+				"name": "str"
+			}
+		]
+	},
+
+	"memcpy": 
+	{
+		"return": 
+		{
+			"type": "void *",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "void *",
+				"name": "dest"
+			},
+
+			{
+				"type": "const void *",
+				"name": "src"
+			},
+
+			{
+				"type": "size_t",
+				"name": "count"
+			}
+		]
+	},
+	
+	"strtol":{
+		"return": 
+		{
+			"type": "long int",
+			"name": "num"
+		},
+		
+		"parameters": 
+		[
+			{
+				"type": "const char *",
+				"name": "str"
+			},
+
+			{
+				"type": "char **",
+				"name": "endptr"
+			},
+
+			{
+				"type": "int",
+				"name": "base"
+			}
+		]	
+	},
+	
+	"strstr":{
+		"return": 
+		{
+			"type": "char *",
+			"name": "retStr"
+		},
+		
+		"parameters": 
+		[
+			{
+				"type": "char *",
+				"name": "str"
+			},
+
+			{
+				"type": "char *",
+				"name": "strSearch"
+			}
+		]	
+	},
+
+	"GetDriveTypeW": 
+	{
+		"return": 
+		{
+			"type": "UINT",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "LPCWSTR",
+				"name": "lpRootPathName"
+			}
+		]
+	},
+
+	"ReleaseMutex": 
+	{
+		"return": 
+		{
+			"type": "BOOL",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "HANDLE",
+				"name": "hMutex"
+			}
+		]
+	},
+
+	"WaitForSingleObject": 
+	{
+		"return": 
+		{
+			"type": "DWORD",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "HANDLE",
+				"name": "hHandle"
+			},
+
+			{
+				"type": "DWORD",
+				"name": "dwMilliseconds"
+			}
+		]
+	},
+
+	"CryptEncrypt": 
+	{
+		"return": 
+		{
+			"type": "BOOL",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "HCRYPTKEY",
+				"name": "hKey"
+			},
+
+			{
+				"type": "HCRYPTHASH",
+				"name": "hHash"
+			},
+
+			{
+				"type": "BOOL",
+				"name": "Final"
+			},
+
+			{
+				"type": "DWORD",
+				"name": "dwFlags"
+			},
+
+			{
+				"type": "BYTE *",
+				"name": "pbData"
+			},
+
+			{
+				"type": "DWORD *",
+				"name": "pdwDataLen"
+			},
+
+			{
+				"type": "DWORD",
+				"name": "dwBufLen"
+			}
+		]
+	},
+
+	"SignalObjectAndWait": 
+	{
+		"return": 
+		{
+			"type": "DWORD",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "HANDLE",
+				"name": "hObjectToSignal"
+			},
+
+			{
+				"type": "HANDLE",
+				"name": "hObjectToWaitOn"
+			},
+
+			{
+				"type": "DWORD",
+				"name": "dwMilliseconds"
+			},
+
+			{
+				"type": "BOOL",
+				"name": "bAlertable"
+			}
+		]
+	},
+
+	"RegCloseKey": 
+	{
+		"return": 
+		{
+			"type": "LSTATUS",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "HKEY",
+				"name": "hKey"
+			}
+		]
+	},
+
+	"GetFileAttributesW": 
+	{
+		"return": 
+		{
+			"type": "DWORD",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "LPCWSTR",
+				"name": "lpFileName"
+			}
+		]
+	},
+
+	"CreatePipe": 
+	{
+		"return": 
+		{
+			"type": "BOOL",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "PHANDLE",
+				"name": "hReadPipe"
+			},
+
+			{
+				"type": "PHANDLE",
+				"name": "hWritePipe"
+			},
+
+			{
+				"type": "LPSECURITY_ATTRIBUTES",
+				"name": "lpPipeAttributes"
+			},
+
+			{
+				"type": "DWORD",
+				"name": "nSize"
+			}
+		]
+	},
+
+	"FileTimeToDosDateTime": 
+	{
+		"return": 
+		{
+			"type": "BOOL",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "const FILETIME *",
+				"name": "lpFileTime"
+			},
+
+			{
+				"type": "LPWORD",
+				"name": "lpFatDate"
+			},
+
+			{
+				"type": "LPWORD",
+				"name": "lpFatTime"
+			}
+		]
+	},
+
+	"MapViewOfFileEx": 
+	{
+		"return": 
+		{
+			"type": "LPVOID",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "HANDLE",
+				"name": "hFileMappingObject"
+			},
+
+			{
+				"type": "DWORD",
+				"name": "dwDesiredAccess"
+			},
+
+			{
+				"type": "DWORD",
+				"name": "dwFileOffsetHigh"
+			},
+
+			{
+				"type": "DWORD",
+				"name": "dwFileOffsetLow"
+			},
+
+			{
+				"type": "SIZE_T",
+				"name": "dwNumberOfBytesToMap"
+			},
+
+			{
+				"type": "LPVOID",
+				"name": "lpBaseAddress"
+			}
+		]
+	},
+
+	"GetVolumeInformationW": 
+	{
+		"return": 
+		{
+			"type": "BOOL",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "LPCWSTR",
+				"name": "lpRootPathName"
+			},
+
+			{
+				"type": "LPWSTR",
+				"name": "lpVolumeNameBuffer"
+			},
+
+			{
+				"type": "DWORD",
+				"name": "nVolumeNameSize"
+			},
+
+			{
+				"type": "LPDWORD",
+				"name": "lpVolumeSerialNumber"
+			},
+
+			{
+				"type": "LPDWORD",
+				"name": "lpMaximumComponentLength"
+			},
+
+			{
+				"type": "LPDWORD",
+				"name": "lpFileSystemFlags"
+			},
+
+			{
+				"type": "LPWSTR",
+				"name": "lpFileSystemNameBuffer"
+			},
+
+			{
+				"type": "DWORD",
+				"name": "nFileSystemNameSize"
+			}
+		]
+	},
+
+	"RegOpenKeyExW": 
+	{
+		"return": 
+		{
+			"type": "LSTATUS",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "HKEY",
+				"name": "hKey"
+			},
+
+			{
+				"type": "LPCWSTR",
+				"name": "lpSubKey"
+			},
+
+			{
+				"type": "DWORD",
+				"name": "ulOptions"
+			},
+
+			{
+				"type": "REGSAM",
+				"name": "samDesired"
+			},
+
+			{
+				"type": "PHKEY",
+				"name": "phkResult"
+			}
+		]
+	},
+
+	"GetFileInformationByHandle": 
+	{
+		"return": 
+		{
+			"type": "BOOL",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "HANDLE",
+				"name": "hFile"
+			},
+
+			{
+				"type": "LPBY_HANDLE_FILE_INFORMATION",
+				"name": "lpFileInformation"
+			}
+		]
+	},
+
+	"SetSecurityDescriptorSacl": 
+	{
+		"return": 
+		{
+			"type": "BOOL",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "PSECURITY_DESCRIPTOR",
+				"name": "pSecurityDescriptor"
+			},
+
+			{
+				"type": "BOOL",
+				"name": "bSaclPresent"
+			},
+
+			{
+				"type": "PACL",
+				"name": "pSacl"
+			},
+
+			{
+				"type": "BOOL",
+				"name": "bSaclDefaulted"
+			}
+		]
+	},
+
+	"GetTokenInformation": 
+	{
+		"return": 
+		{
+			"type": "BOOL",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "HANDLE",
+				"name": "TokenHandle"
+			},
+
+			{
+				"type": "TOKEN_INFORMATION_CLASS",
+				"name": "TokenInformationClass"
+			},
+
+			{
+				"type": "LPVOID",
+				"name": "TokenInformation"
+			},
+
+			{
+				"type": "DWORD",
+				"name": "TokenInformationLength"
+			},
+
+			{
+				"type": "PDWORD",
+				"name": "ReturnLength"
+			}
+		]
+	},
+
+	"WideCharToMultiByte": 
+	{
+		"return": 
+		{
+			"type": "int",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "UINT",
+				"name": "CodePage"
+			},
+
+			{
+				"type": "DWORD",
+				"name": "dwFlags"
+			},
+
+			{
+				"type": "LPCWSTR",
+				"name": "lpWideCharStr"
+			},
+
+			{
+				"type": "int",
+				"name": "cchWideChar"
+			},
+
+			{
+				"type": "LPSTR",
+				"name": "lpMultiByteStr"
+			},
+
+			{
+				"type": "int",
+				"name": "cbMultiByte"
+			},
+
+			{
+				"type": "LPCSTR",
+				"name": "lpDefaultChar"
+			},
+
+			{
+				"type": "LPBOOL",
+				"name": "lpUsedDefaultChar"
+			}
+		]
+	},
+
+	"OpenThreadToken": 
+	{
+		"return": 
+		{
+			"type": "BOOL",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "HANDLE",
+				"name": "ThreadHandle"
+			},
+
+			{
+				"type": "DWORD",
+				"name": "DesiredAccess"
+			},
+
+			{
+				"type": "BOOL",
+				"name": "OpenAsSelf"
+			},
+
+			{
+				"type": "PHANDLE",
+				"name": "TokenHandle"
+			}
+		]
+	},
+
+	"GetSecurityDescriptorSacl": 
+	{
+		"return": 
+		{
+			"type": "BOOL",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "PSECURITY_DESCRIPTOR",
+				"name": "pSecurityDescriptor"
+			},
+
+			{
+				"type": "LPBOOL",
+				"name": "lpbSaclPresent"
+			},
+
+			{
+				"type": "PACL *",
+				"name": "pSacl"
+			},
+
+			{
+				"type": "LPBOOL",
+				"name": "lpbSaclDefaulted"
+			}
+		]
+	},
+
+	"GetTempPathW": 
+	{
+		"return": 
+		{
+			"type": "DWORD",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "DWORD",
+				"name": "nBufferLength"
+			},
+
+			{
+				"type": "LPWSTR",
+				"name": "lpBuffer"
+			}
+		]
+	},
+
+	"GetSystemTimeAsFileTime": 
+	{
+		"return": 
+		{
+			"type": "void",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "LPFILETIME",
+				"name": "lpSystemTimeAsFileTime"
+			}
+		]
+	},
+
+	"HeapReAlloc": 
+	{
+		"return": 
+		{
+			"type": "LPVOID",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "HANDLE",
+				"name": "hHeap"
+			},
+
+			{
+				"type": "DWORD",
+				"name": "dwFlags"
+			},
+
+			{
+				"type": "LPVOID",
+				"name": "lpMem"
+			},
+
+			{
+				"type": "SIZE_T",
+				"name": "dwBytes"
+			}
+		]
+	},
+
+	"FreeLibrary": 
+	{
+		"return": 
+		{
+			"type": "BOOL",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "HMODULE",
+				"name": "hLibModule"
+			}
+		]
+	},
+
+	"LocalFree": 
+	{
+		"return": 
+		{
+			"type": "HLOCAL",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "HLOCAL",
+				"name": "hMem"
+			}
+		]
+	},
+
+	"InitializeCriticalSection": 
+	{
+		"return": 
+		{
+			"type": "void",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "LPCRITICAL_SECTION",
+				"name": "lpCriticalSection"
+			}
+		]
+	},
+
+	"FindClose": 
+	{
+		"return": 
+		{
+			"type": "BOOL",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "HANDLE",
+				"name": "hFindFile"
+			}
+		]
+	},
+
+	"InterlockedDecrement": 
+	{
+		"return": 
+		{
+			"type": "LONG",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "volatile LONG *",
+				"name": "lpAddend"
+			}
+		]
+	},
+
+	"SetFileAttributesW": 
+	{
+		"return": 
+		{
+			"type": "BOOL",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "LPCWSTR",
+				"name": "lpFileName"
+			},
+
+			{
+				"type": "DWORD",
+				"name": "dwFileAttributes"
+			}
+		]
+	},
+
+	"GetEnvironmentVariableW": 
+	{
+		"return": 
+		{
+			"type": "DWORD",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "LPCWSTR",
+				"name": "lpName"
+			},
+
+			{
+				"type": "LPWSTR",
+				"name": "lpBuffer"
+			},
+
+			{
+				"type": "DWORD",
+				"name": "nSize"
+			}
+		]
+	},
+
+	"RegCreateKeyExW": 
+	{
+		"return": 
+		{
+			"type": "LSTATUS",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "HKEY",
+				"name": "hKey"
+			},
+
+			{
+				"type": "LPCWSTR",
+				"name": "lpSubKey"
+			},
+
+			{
+				"type": "DWORD",
+				"name": "Reserved"
+			},
+
+			{
+				"type": "LPWSTR",
+				"name": "lpClass"
+			},
+
+			{
+				"type": "DWORD",
+				"name": "dwOptions"
+			},
+
+			{
+				"type": "REGSAM",
+				"name": "samDesired"
+			},
+
+			{
+				"type": "const LPSECURITY_ATTRIBUTES",
+				"name": "lpSecurityAttributes"
+			},
+
+			{
+				"type": "PHKEY",
+				"name": "phkResult"
+			},
+
+			{
+				"type": "LPDWORD",
+				"name": "lpdwDisposition"
+			}
+		]
+	},
+
+	"LookupPrivilegeValueW": 
+	{
+		"return": 
+		{
+			"type": "BOOL",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "LPCWSTR",
+				"name": "lpSystemName"
+			},
+
+			{
+				"type": "LPCWSTR",
+				"name": "lpName"
+			},
+
+			{
+				"type": "PLUID",
+				"name": "lpLuid"
+			}
+		]
+	},
+
+	"CopyFileW": 
+	{
+		"return": 
+		{
+			"type": "BOOL",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "LPCWSTR",
+				"name": "lpExistingFileName"
+			},
+
+			{
+				"type": "LPCWSTR",
+				"name": "lpNewFileName"
+			},
+
+			{
+				"type": "BOOL",
+				"name": "bFailIfExists"
+			}
+		]
+	},
+
+	"WriteProcessMemory": 
+	{
+		"return": 
+		{
+			"type": "BOOL",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "HANDLE",
+				"name": "hProcess"
+			},
+
+			{
+				"type": "LPVOID",
+				"name": "lpBaseAddress"
+			},
+
+			{
+				"type": "LPCVOID",
+				"name": "lpBuffer"
+			},
+
+			{
+				"type": "SIZE_T",
+				"name": "nSize"
+			},
+
+			{
+				"type": "SIZE_T *",
+				"name": "lpNumberOfBytesWritten"
+			}
+		]
+	},
+
+	"RemoveDirectoryW": 
+	{
+		"return": 
+		{
+			"type": "BOOL",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "LPCWSTR",
+				"name": "lpPathName"
+			}
+		]
+	},
+
+	"CryptVerifySignatureW": 
+	{
+		"return": 
+		{
+			"type": "BOOL",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "HCRYPTHASH",
+				"name": "hHash"
+			},
+
+			{
+				"type": "const BYTE *",
+				"name": "pbSignature"
+			},
+
+			{
+				"type": "DWORD",
+				"name": "dwSigLen"
+			},
+
+			{
+				"type": "HCRYPTKEY",
+				"name": "hPubKey"
+			},
+
+			{
+				"type": "LPCWSTR",
+				"name": "szDescription"
+			},
+
+			{
+				"type": "DWORD",
+				"name": "dwFlags"
+			}
+		]
+	},
+
+	"ExitProcess": 
+	{
+		"return": 
+		{
+			"type": "void",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "UINT",
+				"name": "uExitCode"
+			}
+		]
+	},
+
+	"RegNotifyChangeKeyValue": 
+	{
+		"return": 
+		{
+			"type": "LSTATUS",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "HKEY",
+				"name": "hKey"
+			},
+
+			{
+				"type": "BOOL",
+				"name": "bWatchSubtree"
+			},
+
+			{
+				"type": "DWORD",
+				"name": "dwNotifyFilter"
+			},
+
+			{
+				"type": "HANDLE",
+				"name": "hEvent"
+			},
+
+			{
+				"type": "BOOL",
+				"name": "fAsynchronous"
+			}
+		]
+	},
+
+	"RegQueryValueExW": 
+	{
+		"return": 
+		{
+			"type": "LSTATUS",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "HKEY",
+				"name": "hKey"
+			},
+
+			{
+				"type": "LPCWSTR",
+				"name": "lpValueName"
+			},
+
+			{
+				"type": "LPDWORD",
+				"name": "lpReserved"
+			},
+
+			{
+				"type": "LPDWORD",
+				"name": "lpType"
+			},
+
+			{
+				"type": "LPBYTE",
+				"name": "lpData"
+			},
+
+			{
+				"type": "LPDWORD",
+				"name": "lpcbData"
+			}
+		]
+	},
+
+	"SetSecurityDescriptorDacl": 
+	{
+		"return": 
+		{
+			"type": "BOOL",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "PSECURITY_DESCRIPTOR",
+				"name": "pSecurityDescriptor"
+			},
+
+			{
+				"type": "BOOL",
+				"name": "bDaclPresent"
+			},
+
+			{
+				"type": "PACL",
+				"name": "pDacl"
+			},
+
+			{
+				"type": "BOOL",
+				"name": "bDaclDefaulted"
+			}
+		]
+	},
+
+	"SetThreadPriority": 
+	{
+		"return": 
+		{
+			"type": "BOOL",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "HANDLE",
+				"name": "hThread"
+			},
+
+			{
+				"type": "int",
+				"name": "nPriority"
+			}
+		]
+	},
+
+	"ConvertStringSecurityDescriptorToSecurityDescriptorA": 
+	{
+		"return": 
+		{
+			"type": "BOOL",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "LPCSTR",
+				"name": "StringSecurityDescriptor"
+			},
+
+			{
+				"type": "DWORD",
+				"name": "StringSDRevision"
+			},
+
+			{
+				"type": "PSECURITY_DESCRIPTOR *",
+				"name": "SecurityDescriptor"
+			},
+
+			{
+				"type": "PULONG",
+				"name": "SecurityDescriptorSize"
+			}
+		]
+	},
+
+	"TlsGetValue": 
+	{
+		"return": 
+		{
+			"type": "LPVOID",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "DWORD",
+				"name": "dwTlsIndex"
+			}
+		]
+	},
+
+	"MultiByteToWideChar": 
+	{
+		"return": 
+		{
+			"type": "int",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "UINT",
+				"name": "CodePage"
+			},
+
+			{
+				"type": "DWORD",
+				"name": "dwFlags"
+			},
+
+			{
+				"type": "LPCSTR",
+				"name": "lpMultiByteStr"
+			},
+
+			{
+				"type": "int",
+				"name": "cbMultiByte"
+			},
+
+			{
+				"type": "LPWSTR",
+				"name": "lpWideCharStr"
+			},
+
+			{
+				"type": "int",
+				"name": "cchWideChar"
+			}
+		]
+	},
+
+	"CryptGenKey": 
+	{
+		"return": 
+		{
+			"type": "BOOL",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "HCRYPTPROV",
+				"name": "hProv"
+			},
+
+			{
+				"type": "ALG_ID",
+				"name": "Algid"
+			},
+
+			{
+				"type": "DWORD",
+				"name": "dwFlags"
+			},
+
+			{
+				"type": "HCRYPTKEY *",
+				"name": "phKey"
+			}
+		]
+	},
+
+	"GetModuleHandleA": 
+	{
+		"return": 
+		{
+			"type": "HMODULE",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "LPCSTR",
+				"name": "lpModuleName"
+			}
+		]
+	},
+
+	"CreateThread": 
+	{
+		"return": 
+		{
+			"type": "HANDLE",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "LPSECURITY_ATTRIBUTES",
+				"name": "lpThreadAttributes"
+			},
+
+			{
+				"type": "SIZE_T",
+				"name": "dwStackSize"
+			},
+
+			{
+				"type": "LPTHREAD_START_ROUTINE",
+				"name": "lpStartAddress"
+			},
+
+			{
+				"type": "LPVOID",
+				"name": "lpParameter"
+			},
+
+			{
+				"type": "DWORD",
+				"name": "dwCreationFlags"
+			},
+
+			{
+				"type": "LPDWORD",
+				"name": "lpThreadId"
+			}
+		]
+	},
+
+	"MoveFileExW": 
+	{
+		"return": 
+		{
+			"type": "BOOL",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "LPCWSTR",
+				"name": "lpExistingFileName"
+			},
+
+			{
+				"type": "LPCWSTR",
+				"name": "lpNewFileName"
+			},
+
+			{
+				"type": "DWORD",
+				"name": "dwFlags"
+			}
+		]
+	},
+
+	"CreateMutexW": 
+	{
+		"return": 
+		{
+			"type": "HANDLE",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "LPSECURITY_ATTRIBUTES",
+				"name": "lpMutexAttributes"
+			},
+
+			{
+				"type": "BOOL",
+				"name": "bInitialOwner"
+			},
+
+			{
+				"type": "LPCWSTR",
+				"name": "lpName"
+			}
+		]
+	},
+
+	"ExitThread": 
+	{
+		"return": 
+		{
+			"type": "void",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "DWORD",
+				"name": "dwExitCode"
+			}
+		]
+	},
+
+	"CryptDecrypt": 
+	{
+		"return": 
+		{
+			"type": "BOOL",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "HCRYPTKEY",
+				"name": "hKey"
+			},
+
+			{
+				"type": "HCRYPTHASH",
+				"name": "hHash"
+			},
+
+			{
+				"type": "BOOL",
+				"name": "Final"
+			},
+
+			{
+				"type": "DWORD",
+				"name": "dwFlags"
+			},
+
+			{
+				"type": "BYTE *",
+				"name": "pbData"
+			},
+
+			{
+				"type": "DWORD *",
+				"name": "pdwDataLen"
+			}
+		]
+	},
+
+	"SHGetFolderPathW": 
+	{
+		"return": 
+		{
+			"type": "HRESULT",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "HWND",
+				"name": "hwnd"
+			},
+
+			{
+				"type": "int",
+				"name": "csidl"
+			},
+
+			{
+				"type": "HANDLE",
+				"name": "hToken"
+			},
+
+			{
+				"type": "DWORD",
+				"name": "dwFlags"
+			},
+
+			{
+				"type": "LPWSTR",
+				"name": "pszPath"
+			}
+		]
+	},
+
+	"RegSetValueExW": 
+	{
+		"return": 
+		{
+			"type": "LSTATUS",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "HKEY",
+				"name": "hKey"
+			},
+
+			{
+				"type": "LPCWSTR",
+				"name": "lpValueName"
+			},
+
+			{
+				"type": "DWORD",
+				"name": "Reserved"
+			},
+
+			{
+				"type": "DWORD",
+				"name": "dwType"
+			},
+
+			{
+				"type": "const BYTE *",
+				"name": "lpData"
+			},
+
+			{
+				"type": "DWORD",
+				"name": "cbData"
+			}
+		]
+	},
+
+	"CryptExportKey": 
+	{
+		"return": 
+		{
+			"type": "BOOL",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "HCRYPTKEY",
+				"name": "hKey"
+			},
+
+			{
+				"type": "HCRYPTKEY",
+				"name": "hExpKey"
+			},
+
+			{
+				"type": "DWORD",
+				"name": "dwBlobType"
+			},
+
+			{
+				"type": "DWORD",
+				"name": "dwFlags"
+			},
+
+			{
+				"type": "BYTE *",
+				"name": "pbData"
+			},
+
+			{
+				"type": "DWORD *",
+				"name": "pdwDataLen"
+			}
+		]
+	},
+
+	"InitializeSecurityDescriptor": 
+	{
+		"return": 
+		{
+			"type": "BOOL",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "PSECURITY_DESCRIPTOR",
+				"name": "pSecurityDescriptor"
+			},
+
+			{
+				"type": "DWORD",
+				"name": "dwRevision"
+			}
+		]
+	},
+
+	"EqualSid": 
+	{
+		"return": 
+		{
+			"type": "BOOL",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "PSID",
+				"name": "pSid1"
+			},
+
+			{
+				"type": "PSID",
+				"name": "pSid2"
+			}
+		]
+	},
+
+	"SetEndOfFile": 
+	{
+		"return": 
+		{
+			"type": "BOOL",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "HANDLE",
+				"name": "hFile"
+			}
+		]
+	},
+
+	"InterlockedIncrement": 
+	{
+		"return": 
+		{
+			"type": "LONG",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "volatile LONG *",
+				"name": "lpAddend"
+			}
+		]
+	},
+
+	"CryptDestroyKey": 
+	{
+		"return": 
+		{
+			"type": "BOOL",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "HCRYPTKEY",
+				"name": "hKey"
+			}
+		]
+	},
+
+	"HeapFree": 
+	{
+		"return": 
+		{
+			"type": "BOOL",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "HANDLE",
+				"name": "hHeap"
+			},
+
+			{
+				"type": "DWORD",
+				"name": "dwFlags"
+			},
+
+			{
+				"type": "LPVOID",
+				"name": "lpMem"
+			}
+		]
+	},
+
+	"EnterCriticalSection": 
+	{
+		"return": 
+		{
+			"type": "void",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "LPCRITICAL_SECTION",
+				"name": "lpCriticalSection"
+			}
+		]
+	},
+
+	"GetVersionExW": 
+	{
+		"return": 
+		{
+			"type": "BOOL",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "LPOSVERSIONINFOW",
+				"name": "lpVersionInformation"
+			}
+		]
+	},
+
+	"SetEvent": 
+	{
+		"return": 
+		{
+			"type": "BOOL",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "HANDLE",
+				"name": "hEvent"
+			}
+		]
+	},
+
+	"FlushFileBuffers": 
+	{
+		"return": 
+		{
+			"type": "BOOL",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "HANDLE",
+				"name": "hFile"
+			}
+		]
+	},
+
+	"LoadLibraryA": 
+	{
+		"return": 
+		{
+			"type": "HMODULE",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "LPCSTR",
+				"name": "lpLibFileName"
+			}
+		]
+	},
+
+	"CryptCreateHash": 
+	{
+		"return": 
+		{
+			"type": "BOOL",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "HCRYPTPROV",
+				"name": "hProv"
+			},
+
+			{
+				"type": "ALG_ID",
+				"name": "Algid"
+			},
+
+			{
+				"type": "HCRYPTKEY",
+				"name": "hKey"
+			},
+
+			{
+				"type": "DWORD",
+				"name": "dwFlags"
+			},
+
+			{
+				"type": "HCRYPTHASH *",
+				"name": "phHash"
+			}
+		]
+	},
+
+	"CreateRemoteThread": 
+	{
+		"return": 
+		{
+			"type": "HANDLE",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "HANDLE",
+				"name": "hProcess"
+			},
+
+			{
+				"type": "LPSECURITY_ATTRIBUTES",
+				"name": "lpThreadAttributes"
+			},
+
+			{
+				"type": "SIZE_T",
+				"name": "dwStackSize"
+			},
+
+			{
+				"type": "LPTHREAD_START_ROUTINE",
+				"name": "lpStartAddress"
+			},
+
+			{
+				"type": "LPVOID",
+				"name": "lpParameter"
+			},
+
+			{
+				"type": "DWORD",
+				"name": "dwCreationFlags"
+			},
+
+			{
+				"type": "LPDWORD",
+				"name": "lpThreadId"
+			}
+		]
+	},
+
+	"OpenProcessToken": 
+	{
+		"return": 
+		{
+			"type": "BOOL",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "HANDLE",
+				"name": "ProcessHandle"
+			},
+
+			{
+				"type": "DWORD",
+				"name": "DesiredAccess"
+			},
+
+			{
+				"type": "PHANDLE",
+				"name": "TokenHandle"
+			}
+		]
+	},
+
+	"CryptDuplicateHash": 
+	{
+		"return": 
+		{
+			"type": "BOOL",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "HCRYPTHASH",
+				"name": "hHash"
+			},
+
+			{
+				"type": "DWORD *",
+				"name": "pdwReserved"
+			},
+
+			{
+				"type": "DWORD",
+				"name": "dwFlags"
+			},
+
+			{
+				"type": "HCRYPTHASH *",
+				"name": "phHash"
+			}
+		]
+	},
+
+	"GetFileSize": 
+	{
+		"return": 
+		{
+			"type": "DWORD",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "HANDLE",
+				"name": "hFile"
+			},
+
+			{
+				"type": "LPDWORD",
+				"name": "lpFileSizeHigh"
+			}
+		]
+	},
+
+	"OpenProcess": 
+	{
+		"return": 
+		{
+			"type": "HANDLE",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "DWORD",
+				"name": "dwDesiredAccess"
+			},
+
+			{
+				"type": "BOOL",
+				"name": "bInheritHandle"
+			},
+
+			{
+				"type": "DWORD",
+				"name": "dwProcessId"
+			}
+		]
+	},
+
+	"ReadProcessMemory": 
+	{
+		"return": 
+		{
+			"type": "BOOL",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "HANDLE",
+				"name": "hProcess"
+			},
+
+			{
+				"type": "LPCVOID",
+				"name": "lpBaseAddress"
+			},
+
+			{
+				"type": "LPVOID",
+				"name": "lpBuffer"
+			},
+
+			{
+				"type": "SIZE_T",
+				"name": "nSize"
+			},
+
+			{
+				"type": "SIZE_T *",
+				"name": "lpNumberOfBytesRead"
+			}
+		]
+	},
+
+	"CreateDirectoryW": 
+	{
+		"return": 
+		{
+			"type": "BOOL",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "LPCWSTR",
+				"name": "lpPathName"
+			},
+
+			{
+				"type": "LPSECURITY_ATTRIBUTES",
+				"name": "lpSecurityAttributes"
+			}
+		]
+	},
+
+	"DeleteFileW": 
+	{
+		"return": 
+		{
+			"type": "BOOL",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "LPCWSTR",
+				"name": "lpFileName"
+			}
+		]
+	},
+
+	"WaitForMultipleObjects": 
+	{
+		"return": 
+		{
+			"type": "DWORD",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "DWORD",
+				"name": "nCount"
+			},
+
+			{
+				"type": "const HANDLE *",
+				"name": "lpHandles"
+			},
+
+			{
+				"type": "BOOL",
+				"name": "bWaitAll"
+			},
+
+			{
+				"type": "DWORD",
+				"name": "dwMilliseconds"
+			}
+		]
+	},
+
+	"PathCombineW": 
+	{
+		"return": 
+		{
+			"type": "LPWSTR",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "LPWSTR",
+				"name": "pszDest"
+			},
+
+			{
+				"type": "LPCWSTR",
+				"name": "pszDir"
+			},
+
+			{
+				"type": "LPCWSTR",
+				"name": "pszFile"
+			}
+		]
+	},
+
+	"VirtualProtectEx": 
+	{
+		"return": 
+		{
+			"type": "BOOL",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "HANDLE",
+				"name": "hProcess"
+			},
+
+			{
+				"type": "LPVOID",
+				"name": "lpAddress"
+			},
+
+			{
+				"type": "SIZE_T",
+				"name": "dwSize"
+			},
+
+			{
+				"type": "DWORD",
+				"name": "flNewProtect"
+			},
+
+			{
+				"type": "PDWORD",
+				"name": "lpflOldProtect"
+			}
+		]
+	},
+
+	"GetTempFileNameW": 
+	{
+		"return": 
+		{
+			"type": "UINT",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "LPCWSTR",
+				"name": "lpPathName"
+			},
+
+			{
+				"type": "LPCWSTR",
+				"name": "lpPrefixString"
+			},
+
+			{
+				"type": "UINT",
+				"name": "uUnique"
+			},
+
+			{
+				"type": "LPWSTR",
+				"name": "lpTempFileName"
+			}
+		]
+	},
+
+	"CreateFileMappingW": 
+	{
+		"return": 
+		{
+			"type": "HANDLE",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "HANDLE",
+				"name": "hFile"
+			},
+
+			{
+				"type": "LPSECURITY_ATTRIBUTES",
+				"name": "lpFileMappingAttributes"
+			},
+
+			{
+				"type": "DWORD",
+				"name": "flProtect"
+			},
+
+			{
+				"type": "DWORD",
+				"name": "dwMaximumSizeHigh"
+			},
+
+			{
+				"type": "DWORD",
+				"name": "dwMaximumSizeLow"
+			},
+
+			{
+				"type": "LPCWSTR",
+				"name": "lpName"
+			}
+		]
+	},
+
+	"CryptReleaseContext": 
+	{
+		"return": 
+		{
+			"type": "BOOL",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "HCRYPTPROV",
+				"name": "hProv"
+			},
+
+			{
+				"type": "DWORD",
+				"name": "dwFlags"
+			}
+		]
+	},
+
+	"GetFileSizeEx": 
+	{
+		"return": 
+		{
+			"type": "BOOL",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "HANDLE",
+				"name": "hFile"
+			},
+
+			{
+				"type": "PLARGE_INTEGER",
+				"name": "lpFileSize"
+			}
+		]
+	},
+
+	"GetModuleFileNameW": 
+	{
+		"return": 
+		{
+			"type": "DWORD",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "HMODULE",
+				"name": "hModule"
+			},
+
+			{
+				"type": "LPWSTR",
+				"name": "lpFilename"
+			},
+
+			{
+				"type": "DWORD",
+				"name": "nSize"
+			}
+		]
+	},
+
+	"FindNextFileW": 
+	{
+		"return": 
+		{
+			"type": "BOOL",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "HANDLE",
+				"name": "hFindFile"
+			},
+
+			{
+				"type": "LPWIN32_FIND_DATAW",
+				"name": "lpFindFileData"
+			}
+		]
+	},
+
+	"CryptAcquireContextW": 
+	{
+		"return": 
+		{
+			"type": "BOOL",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "HCRYPTPROV *",
+				"name": "phProv"
+			},
+
+			{
+				"type": "LPCWSTR",
+				"name": "szContainer"
+			},
+
+			{
+				"type": "LPCWSTR",
+				"name": "szProvider"
+			},
+
+			{
+				"type": "DWORD",
+				"name": "dwProvType"
+			},
+
+			{
+				"type": "DWORD",
+				"name": "dwFlags"
+			}
+		]
+	},
+
+	"ResetEvent": 
+	{
+		"return": 
+		{
+			"type": "BOOL",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "HANDLE",
+				"name": "hEvent"
+			}
+		]
+	},
+
+	"GetComputerNameA": 
+	{
+		"return": 
+		{
+			"type": "BOOL",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "LPSTR",
+				"name": "lpBuffer"
+			},
+
+			{
+				"type": "LPDWORD",
+				"name": "nSize"
+			}
+		]
+	},
+
+	"FindFirstFileW": 
+	{
+		"return": 
+		{
+			"type": "HANDLE",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "LPCWSTR",
+				"name": "lpFileName"
+			},
+
+			{
+				"type": "LPWIN32_FIND_DATAW",
+				"name": "lpFindFileData"
+			}
+		]
+	},
+
+	"DuplicateHandle": 
+	{
+		"return": 
+		{
+			"type": "BOOL",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "HANDLE",
+				"name": "hSourceProcessHandle"
+			},
+
+			{
+				"type": "HANDLE",
+				"name": "hSourceHandle"
+			},
+
+			{
+				"type": "HANDLE",
+				"name": "hTargetProcessHandle"
+			},
+
+			{
+				"type": "LPHANDLE",
+				"name": "lpTargetHandle"
+			},
+
+			{
+				"type": "DWORD",
+				"name": "dwDesiredAccess"
+			},
+
+			{
+				"type": "BOOL",
+				"name": "bInheritHandle"
+			},
+
+			{
+				"type": "DWORD",
+				"name": "dwOptions"
+			}
+		]
+	},
+
+	"GetProcAddress": 
+	{
+		"return": 
+		{
+			"type": "FARPROC",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "HMODULE",
+				"name": "hModule"
+			},
+
+			{
+				"type": "LPCSTR",
+				"name": "lpProcName"
+			}
+		]
+	},
+
+	"CryptDestroyHash": 
+	{
+		"return": 
+		{
+			"type": "BOOL",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "HCRYPTHASH",
+				"name": "hHash"
+			}
+		]
+	},
+
+	"CreateEventW": 
+	{
+		"return": 
+		{
+			"type": "HANDLE",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "LPSECURITY_ATTRIBUTES",
+				"name": "lpEventAttributes"
+			},
+
+			{
+				"type": "BOOL",
+				"name": "bManualReset"
+			},
+
+			{
+				"type": "BOOL",
+				"name": "bInitialState"
+			},
+
+			{
+				"type": "LPCWSTR",
+				"name": "lpName"
+			}
+		]
+	},
+
+	"CryptGetHashParam": 
+	{
+		"return": 
+		{
+			"type": "BOOL",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "HCRYPTHASH",
+				"name": "hHash"
+			},
+
+			{
+				"type": "DWORD",
+				"name": "dwParam"
+			},
+
+			{
+				"type": "BYTE *",
+				"name": "pbData"
+			},
+
+			{
+				"type": "DWORD *",
+				"name": "pdwDataLen"
+			},
+
+			{
+				"type": "DWORD",
+				"name": "dwFlags"
+			}
+		]
+	},
+
+	"CreateFileW": 
+	{
+		"return": 
+		{
+			"type": "HANDLE",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "LPCWSTR",
+				"name": "lpFileName"
+			},
+
+			{
+				"type": "DWORD",
+				"name": "dwDesiredAccess"
+			},
+
+			{
+				"type": "DWORD",
+				"name": "dwShareMode"
+			},
+
+			{
+				"type": "LPSECURITY_ATTRIBUTES",
+				"name": "lpSecurityAttributes"
+			},
+
+			{
+				"type": "DWORD",
+				"name": "dwCreationDisposition"
+			},
+
+			{
+				"type": "DWORD",
+				"name": "dwFlagsAndAttributes"
+			},
+
+			{
+				"type": "HANDLE",
+				"name": "hTemplateFile"
+			}
+		]
+	},
+
+	"TlsSetValue": 
+	{
+		"return": 
+		{
+			"type": "BOOL",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "DWORD",
+				"name": "dwTlsIndex"
+			},
+
+			{
+				"type": "LPVOID",
+				"name": "lpTlsValue"
+			}
+		]
+	},
+
+	"HeapAlloc": 
+	{
+		"return": 
+		{
+			"type": "LPVOID",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "HANDLE",
+				"name": "hHeap"
+			},
+
+			{
+				"type": "DWORD",
+				"name": "dwFlags"
+			},
+
+			{
+				"type": "SIZE_T",
+				"name": "dwBytes"
+			}
+		]
+	},
+
+	"SetNamedSecurityInfoW": 
+	{
+		"return": 
+		{
+			"type": "DWORD",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "LPWSTR",
+				"name": "pObjectName"
+			},
+
+			{
+				"type": "SE_OBJECT_TYPE",
+				"name": "ObjectType"
+			},
+
+			{
+				"type": "SECURITY_INFORMATION",
+				"name": "SecurityInfo"
+			},
+
+			{
+				"type": "PSID",
+				"name": "psidOwner"
+			},
+
+			{
+				"type": "PSID",
+				"name": "psidGroup"
+			},
+
+			{
+				"type": "PACL",
+				"name": "pDacl"
+			},
+
+			{
+				"type": "PACL",
+				"name": "pSacl"
+			}
+		]
+	},
+
+	"LeaveCriticalSection": 
+	{
+		"return": 
+		{
+			"type": "void",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "LPCRITICAL_SECTION",
+				"name": "lpCriticalSection"
+			}
+		]
+	},
+
+	"GetNativeSystemInfo": 
+	{
+		"return": 
+		{
+			"type": "void",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "LPSYSTEM_INFO",
+				"name": "lpSystemInfo"
+			}
+		]
+	},
+
+	"VirtualAllocEx": 
+	{
+		"return": 
+		{
+			"type": "LPVOID",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "HANDLE",
+				"name": "hProcess"
+			},
+
+			{
+				"type": "LPVOID",
+				"name": "lpAddress"
+			},
+
+			{
+				"type": "SIZE_T",
+				"name": "dwSize"
+			},
+
+			{
+				"type": "DWORD",
+				"name": "flAllocationType"
+			},
+
+			{
+				"type": "DWORD",
+				"name": "flProtect"
+			}
+		]
+	},
+
+	"AdjustTokenPrivileges": 
+	{
+		"return": 
+		{
+			"type": "BOOL",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "HANDLE",
+				"name": "TokenHandle"
+			},
+
+			{
+				"type": "BOOL",
+				"name": "DisableAllPrivileges"
+			},
+
+			{
+				"type": "PTOKEN_PRIVILEGES",
+				"name": "NewState"
+			},
+
+			{
+				"type": "DWORD",
+				"name": "BufferLength"
+			},
+
+			{
+				"type": "PTOKEN_PRIVILEGES",
+				"name": "PreviousState"
+			},
+
+			{
+				"type": "PDWORD",
+				"name": "ReturnLength"
+			}
+		]
+	},
+
+	"CryptHashData": 
+	{
+		"return": 
+		{
+			"type": "BOOL",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "HCRYPTHASH",
+				"name": "hHash"
+			},
+
+			{
+				"type": "const BYTE *",
+				"name": "pbData"
+			},
+
+			{
+				"type": "DWORD",
+				"name": "dwDataLen"
+			},
+
+			{
+				"type": "DWORD",
+				"name": "dwFlags"
+			}
+		]
+	},
+
+	"FileTimeToLocalFileTime": 
+	{
+		"return": 
+		{
+			"type": "BOOL",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "const FILETIME *",
+				"name": "lpFileTime"
+			},
+
+			{
+				"type": "LPFILETIME",
+				"name": "lpLocalFileTime"
+			}
+		]
+	},
+
+	"VirtualFreeEx": 
+	{
+		"return": 
+		{
+			"type": "BOOL",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "HANDLE",
+				"name": "hProcess"
+			},
+
+			{
+				"type": "LPVOID",
+				"name": "lpAddress"
+			},
+
+			{
+				"type": "SIZE_T",
+				"name": "dwSize"
+			},
+
+			{
+				"type": "DWORD",
+				"name": "dwFreeType"
+			}
+		]
+	},
+
+	"SetFilePointer": 
+	{
+		"return": 
+		{
+			"type": "DWORD",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "HANDLE",
+				"name": "hFile"
+			},
+
+			{
+				"type": "LONG",
+				"name": "lDistanceToMove"
+			},
+
+			{
+				"type": "PLONG",
+				"name": "lpDistanceToMoveHigh"
+			},
+
+			{
+				"type": "DWORD",
+				"name": "dwMoveMethod"
+			}
+		]
+	},
+
+	"ReadFile": 
+	{
+		"return": 
+		{
+			"type": "BOOL",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "HANDLE",
+				"name": "hFile"
+			},
+
+			{
+				"type": "LPVOID",
+				"name": "lpBuffer"
+			},
+
+			{
+				"type": "DWORD",
+				"name": "nNumberOfBytesToRead"
+			},
+
+			{
+				"type": "LPDWORD",
+				"name": "lpNumberOfBytesRead"
+			},
+
+			{
+				"type": "LPOVERLAPPED",
+				"name": "lpOverlapped"
+			}
+		]
+	},
+
+	"CloseHandle": 
+	{
+		"return": 
+		{
+			"type": "BOOL",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "HANDLE",
+				"name": "hObject"
+			}
+		]
+	},
+
+	"GetLengthSid": 
+	{
+		"return": 
+		{
+			"type": "DWORD",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "PSID",
+				"name": "pSid"
+			}
+		]
+	},
+
+	"GetModuleHandleW": 
+	{
+		"return": 
+		{
+			"type": "HMODULE",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "LPCWSTR",
+				"name": "lpModuleName"
+			}
+		]
+	},
+
+	"UnmapViewOfFile": 
+	{
+		"return": 
+		{
+			"type": "BOOL",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "LPCVOID",
+				"name": "lpBaseAddress"
+			}
+		]
+	},
+
+	"WriteFile": 
+	{
+		"return": 
+		{
+			"type": "BOOL",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "HANDLE",
+				"name": "hFile"
+			},
+
+			{
+				"type": "LPCVOID",
+				"name": "lpBuffer"
+			},
+
+			{
+				"type": "DWORD",
+				"name": "nNumberOfBytesToWrite"
+			},
+
+			{
+				"type": "LPDWORD",
+				"name": "lpNumberOfBytesWritten"
+			},
+
+			{
+				"type": "LPOVERLAPPED",
+				"name": "lpOverlapped"
+			}
+		]
+	},
+
+	"CreateProcessW": 
+	{
+		"return": 
+		{
+			"type": "BOOL",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "LPCWSTR",
+				"name": "lpApplicationName"
+			},
+
+			{
+				"type": "LPWSTR",
+				"name": "lpCommandLine"
+			},
+
+			{
+				"type": "LPSECURITY_ATTRIBUTES",
+				"name": "lpProcessAttributes"
+			},
+
+			{
+				"type": "LPSECURITY_ATTRIBUTES",
+				"name": "lpThreadAttributes"
+			},
+
+			{
+				"type": "BOOL",
+				"name": "bInheritHandles"
+			},
+
+			{
+				"type": "DWORD",
+				"name": "dwCreationFlags"
+			},
+
+			{
+				"type": "LPVOID",
+				"name": "lpEnvironment"
+			},
+
+			{
+				"type": "LPCWSTR",
+				"name": "lpCurrentDirectory"
+			},
+
+			{
+				"type": "LPSTARTUPINFOW",
+				"name": "lpStartupInfo"
+			},
+
+			{
+				"type": "LPPROCESS_INFORMATION",
+				"name": "lpProcessInformation"
+			}
+		]
+	},
+
+	"Sleep": 
+	{
+		"return": 
+		{
+			"type": "void",
+			"name": null
+		},
+
+		"parameters": 
+		[
+			{
+				"type": "DWORD",
+				"name": "dwMilliseconds"
+			}
+		]
+	}
+}

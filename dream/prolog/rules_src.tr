@@ -1,0 +1,210 @@
+[1]
+Signature:
+	memcpy_1(dst, src, len){
+		k = $len;
+		d = $dst;
+		if(k != 0){
+			x = $src - $dst2;
+			do{
+				c = *(x + d);
+				*(d) = c;
+				d++;
+				k--;
+			}while(k != 0);
+		}
+		META: SAME_EXPR(dst, dst2);
+	}
+Transformation:
+	memcpy(dst, src, len);
+
+
+[2]
+Signature:
+	memcpy_2(dst, src, len){
+		len_cpy = $len;
+		src_cpy = $src;
+		if(len_cpy != 0){
+			a = dst;
+			d = src_cpy - dst;
+			i = len_cpy;
+			do{
+				*(a) = *(d + a);
+				a++;
+				i--;
+			}while(i != 0);
+		}
+	}
+
+Transformation:
+	memcpy(dst, src, len);
+
+[3]
+Signature:
+	memcpy_3(dst, src, len){
+		d = $src - dst;
+		do{
+			c = *(d + dst);
+			*(dst) = c;
+			dst++;
+			len--;
+		}while(len != 0);
+	}
+Transformation:	
+	memcpy(dst, src, len);
+	
+[4]
+Signature:
+	memcpy_4(dst, src, len){
+		d = $src - dst;
+		i = $len;
+		do{
+			c = *(d + dst);
+			*(dst) = c;
+			dst++;
+			i--;
+		}while(i != 0);
+	}
+Transformation:	
+	memcpy(dst, src, len);	
+
+[5]
+Signature:
+	strlen_w(len, str){
+		len = 0;
+		if(*str != len){
+			do{
+				len++;
+			}while(*(str + len * 2) != 0);
+		}
+	}
+Transformation:
+	len = wclen(str);
+	
+[6]
+Signature:
+	strlen_1(len, str){
+		if(*str != len){
+			do{
+				len++;
+			}while(*(str + len) != 0);
+		}
+		len--;
+	}
+Transformation:
+	len = wclen(str);
+
+[7]
+Signature:
+	strlen_2(len, str){
+		len = 0;
+        if(*str != len)
+          do
+            len++;
+          while(*(str + len) != 0);
+	}
+Transformation:
+	len = strlen(str);
+	
+[8]
+Signature:
+	wcscmp(wsStr1, wcStr2, num, result){
+		do{
+			c1 = *wsStr1;
+			if(c1 < 0x41 || c1 > 0x5a)
+				v1 = c1;
+			else
+				v1 = c1 + 0x20;
+			c2 = *wcStr2;
+			if(c2 < 0x41 || c2 > 0x5a)
+				v2 = c2;
+			else
+				v2 = c2 + 0x20;
+			result = v1 - v2;
+			if(result != 0)
+				return result;
+			wsStr1 += 2;
+			wcStr2 += 2;
+		}while(wsStr1 < num);
+	}
+Transformation:
+	result = wcscmp(wsStr1, wcStr2);
+	
+[9]
+Signature:
+	strncmpi_1(str1, str2, result, x){
+		i = str2 - str1;
+		do{
+			c1 = *str1;
+			if(c1 < 0x41 || c1 > 0x5a)
+				v1 = c1;
+			else
+				v1 = c1 + 0x20;
+			c2 = *(i + str1);
+			if(c2 < 0x41 || c2 > 0x5a)
+				v2 = c2;
+			else
+				v2 = c2 + 0x20;
+			result = v1 - v2;
+			if(result != 0)
+				break;
+			str1++;
+		}while(str1 < $x);
+	}
+Transformation:
+	result = strncmpi(str1, str2, x - str1);	
+	
+[10]
+Signature:
+	two_cond(a, b, n){
+		if($a)
+			return $n;
+		if($b)
+			return $n2;
+		META: SAME_EXPR(n, n2);
+	}
+Transformation:
+	if(a || b)
+		return n;
+	
+[11]
+Signature:
+	ternary_op(cond, x, v1, v2){
+		if($cond)
+			x = $v1;
+		else
+			x = $v2;
+	}
+Transformation:
+	x = cond ? v1 : v2;
+	
+[12]
+Signature:
+	memset_1(ptr, value, num){
+		do{
+			*ptr = value;
+			ptr++;
+			num--;
+		}while(num != 0);
+	}
+Transformation:
+	memset(ptr, value, num);
+
+
+
+[13]
+Signature:
+	compund_condition(v, condA, condB1, condB2){
+		v = $condB1;
+		if($condA)
+			v = $condB2;
+	}
+Transformation:
+	v = (!condA && condB1) || (condA && condB2);
+
+[14]
+Signature:
+	parity_1(v){
+		v % 2 != 1; 
+	}
+Transformation:
+	v % 2 == 0;

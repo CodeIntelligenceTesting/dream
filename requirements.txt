@@ -1,0 +1,4 @@
+sympy
+pycparser
+pydot
+#pyswip
